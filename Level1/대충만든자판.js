@@ -33,13 +33,22 @@ solution(["AAAAAAA", "AAAAAA"], ["ASA", "ASTT"]); // [-1, -1]
 function solution2(keymap, targets) {
   const answer = [];
   const map = {};
+  
 
   for (const items of keymap) {
     items.split('').map((item, index) => {
       map[item] = (map[item] < index+1 ? map[item] : index + 1)
     })
   }
-  console.log(map);
+  for (const items of targets) {
+    answer.push(items.split('').reduce((cur, item) => {
+      console.log("cur, map[item]", cur, map[item]);
+      return cur += map[item];
+    }, 0) || -1)
+  }
+
+  console.log(answer);
+  
 }
 
 solution2(["ABACD", "BCEFD"], ["ABCD", "AABB"]); // [9, 4]
