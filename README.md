@@ -1,3 +1,3 @@
-# programmers-algorithm
+# algorithm-solution-javascript
 
-프로그래머스 알고리즘 문제 풀이 레포지입니다.
+| 프로그래머스 문제 풀이 저장소.
