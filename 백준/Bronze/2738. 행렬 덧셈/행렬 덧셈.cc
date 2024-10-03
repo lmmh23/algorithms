@@ -38,7 +38,7 @@ int main() {
     for (int j = 0; j < M; j++) {
       cout << result[i][j] << " ";
     }
-    cout << endl;  // 각 행의 끝에서 줄바꿈
+    cout << endl;
   }
 
   return 0;
