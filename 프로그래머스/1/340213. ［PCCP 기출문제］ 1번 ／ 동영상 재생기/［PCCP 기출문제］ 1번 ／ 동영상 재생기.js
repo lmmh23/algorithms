@@ -1,28 +1,33 @@
 function solution(video_len, pos, op_start, op_end, commands) {
-  let mPos = toMinutes(pos);
-  const mOpStart = toMinutes(op_start);
-  const mOpEnd = toMinutes(op_end);
-  const mVideo = toMinutes(video_len);
+  const videoLenS = toSecond(video_len);
+  let posS = toSecond(pos);
+  const opStartS = toSecond(op_start);
+  const opEndS = toSecond(op_end);
 
-  if (mPos >= mOpStart && mPos <= mOpEnd) mPos = mOpEnd;
+  if (posS >= opStartS && posS <= opEndS) posS = opEndS;
 
-  commands.forEach((p) => {
-    mPos += p === "next" ? 10 : -10;
+  for (let i = 0; i < commands.length; i++) {
+    posS += commands[i] === "next" ? 10 : -10;
+    if (posS < 0) {
+      posS = 0;
+    }
+    if (posS > videoLenS) {
+      posS = videoLenS;
+    }
+    if (posS >= opStartS && posS <= opEndS) {
+      posS = opEndS;
+    }
+  }
 
-    if (mPos < 0) mPos = 0;
-
-    if (mPos > mVideo) mPos = mVideo;
-
-    if (mPos >= mOpStart && mPos <= mOpEnd) mPos = mOpEnd;
-  });
-
-  const h = Math.floor(mPos / 60) + "";
-  const m = (mPos % 60) + "";
+  const h = Math.floor(posS / 60) + "";
+  const m = (posS % 60) + "";
 
   return `${h.padStart(2, "0")}:${m.padStart(2, "0")}`;
 }
 
-function toMinutes(time) {
-  const [h, m] = time.split(":");
-  return Number(h) * 60 + Number(m);
+function toSecond(target) {
+  const [minute, second] = target.split(":");
+  return Number(minute) * 60 + Number(second);
 }
+
+console.log(solution("34:33", "13:00", "00:55", "02:55", ["next", "prev"]));
