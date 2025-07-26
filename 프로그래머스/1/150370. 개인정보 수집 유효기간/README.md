@@ -1,10 +1,10 @@
 # [level 1] 개인정보 수집 유효기간 - 150370 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/150370) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/150370?language=cpp) 
 
 ### 성능 요약
 
-메모리: 33.8 MB, 시간: 4.04 ms
+메모리: 3.72 MB, 시간: 0.33 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 05월 02일 09:31:21
+2025년 07월 26일 13:42:18
 
 ### 문제 설명
 
