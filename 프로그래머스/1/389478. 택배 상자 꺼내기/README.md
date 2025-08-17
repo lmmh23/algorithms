@@ -1,6 +1,6 @@
 # [level 1] 택배 상자 꺼내기 - 389478 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/389478?language=cpp) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/389478) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 08월 06일 18:37:52
+2025년 08월 17일 16:37:18
 
 ### 문제 설명
 
